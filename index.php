@@ -15,7 +15,7 @@ function resta() {
   print_r('<p>10 - 5 =</p>');
   print_r($resultado);
 }
-
+ 
 function multiplicacion() {
   $valor1 = 10;
   $valor2 = 5;
