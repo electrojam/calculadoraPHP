@@ -1,39 +1,40 @@
 <?php 
+/*  Tener una lista de ciudades con un clima y una ubicación específica */
 
-function suma() {
-  $valor1 = 10;
-  $valor2 = 5;
-  $resultado = $valor1 + $valor2;
-  print_r('<p>10 + 5 =</p>');
-  print_r($resultado);
+function recomendacion() {
+  
+  $clima = array(
+    "Bogota" => "frio",
+    "Monteria" => "calido",
+    "Medellin" => "templado"
+  );
+
+  $ubicacion = array(
+    "Guajira" => "Norte",
+    "Leticia" => "Sur",
+    "Santander" => "Este",
+    "Antioquia" => "Oeste"
+  );
+    
+  $turismo = array(
+    "Santa Marta" => "mar",
+    "Villavicencio" => "llano",
+    "Riohacha" => "desierto",
+    "Quindio" => "valle"
+  );
+
+  switch("turismo") {
+    case "clima":
+      echo array_search("frio", $clima);
+    break;
+    case "ubicacion":
+      echo array_search("norte", $ubicacion);
+    break;
+    case "turismo":
+      echo array_search("desierto", $turismo);
+    break;
+  }
 }
 
-function resta() {
-  $valor1 = 10;
-  $valor2 = 5;
-  $resultado = $valor1 - $valor2;
-  print_r('<p>10 - 5 =</p>');
-  print_r($resultado);
-}
- 
-function multiplicacion() {
-  $valor1 = 10;
-  $valor2 = 5;
-  $resultado = $valor1 * $valor2;
-  print_r('<p>10 x 5 =<p>');
-  print_r($resultado);
-}
-
-function division() {
-  $valor1 = 10;
-  $valor2 = 5;
-  $resultado = $valor1 / $valor2;
-  print_r('<p>10 / 5 =<p>');
-  print_r($resultado);
-}
-
-suma();
-resta();
-multiplicacion();
-division();
+recomendacion();
 ?>
